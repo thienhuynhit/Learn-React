@@ -3,16 +3,11 @@ import ImageMeals from "../../assets/meals.jpg";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton.js";
 const Header = (props) => {
-  const handleCArtButton = (value) => {
-    console.log("tracking data Cart Header Button");
-    console.log(value);
-    props.onShowCart(value);
-  };
   return (
     <Fragment>
       <header className={classes.header}>
         <h1>Food Delivery App</h1>
-        <HeaderCartButton onShow={handleCArtButton} />
+        <HeaderCartButton onShow={props.onShow} />
       </header>
       <div className={classes["main-image"]}>
         <img src={ImageMeals} alt="A table with full dishes!"></img>

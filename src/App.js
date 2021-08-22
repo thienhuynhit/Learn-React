@@ -4,11 +4,11 @@ import Meals from "./components/Meals/Meals.js";
 import Cart from "./components/Cart/Cart";
 function App() {
   const [isShowCart, setisShowCart] = useState(false);
-  const handleShowCart = (value) => {
-    setisShowCart(value);
+  const handleShowCart = () => {
+    setisShowCart(true);
   };
-  const handleCloseCart = (value) => {
-    setisShowCart(value);
+  const handleCloseCart = () => {
+    setisShowCart(false);
   };
   const handleOrder = (value) => {
     value && console.log("Ordering...");
@@ -16,7 +16,7 @@ function App() {
   return (
     <Fragment>
       {isShowCart && <Cart onClose={handleCloseCart} onOrder={handleOrder} />}
-      <Header onShowCart={handleShowCart}></Header>
+      <Header onShow={handleShowCart}></Header>
       <Meals />
     </Fragment>
   );

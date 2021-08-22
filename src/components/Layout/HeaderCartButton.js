@@ -3,12 +3,9 @@ import classes from "./HeaderCartButton.module.css";
 import CartIcon from "../Cart/CartIcon.js";
 
 const HeaderCartButton = (props) => {
-  const handleClick = (event) => {
-    props.onShow(true);
-  };
   return (
     <React.Fragment>
-      <button className={classes.button} onClick={handleClick}>
+      <button className={classes.button} onClick={props.onShow}>
         <span className={classes.icon}>
           <CartIcon />
         </span>
