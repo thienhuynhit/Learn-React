@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Fragment>
       <header className={classes.header}>
-        <h1>Food Order App</h1>
+        <h1>Food Delivery App</h1>
         <HeaderCartButton />
       </header>
       <div className={classes["main-image"]}>
