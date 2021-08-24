@@ -1,7 +1,7 @@
 import AvailableMeals from "./AvailableMeals.js";
 import MealsSummary from "./MealsSummary.js";
 import React from "react";
-const Meals = () => {
+const Meals = (props) => {
   return (
     <React.Fragment>
       <MealsSummary />
